@@ -13,7 +13,7 @@ Dotfiles for Work Environment
 ### Terminal
 
 - Terminal Emulator: kitty
-- Terminal Font: IBM Plez for powerline 16.0 (NerdFonts)
+- Terminal Font: IBM Plex for powerline 16.0 (NerdFonts)
 - Shell: zsh
 - Shell Framework: oh-my-zsh (Power Level 9K Theme)
 
