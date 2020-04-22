@@ -10,8 +10,13 @@ $HOME/.config/polybar/launch.sh &
 $HOME/scripts/launch.sh &
 timekprd & 
 
-bspc monitor eDP1 -d 
-bspc monitor HDMI1 -d         
+my_laptop_external_monitor=$(xrandr --query | grep 'HDMI1')
+if [[ $my_laptop_external_monitor = *disconnected* ]]; then
+	bspc monitor eDP1 -d          
+else
+	bspc monitor eDP1 -d 
+	bspc monitor HDMI1 -d         
+fi
 
 bspc config border_width         5
 bspc config window_gap          30

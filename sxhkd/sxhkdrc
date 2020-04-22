@@ -10,13 +10,15 @@ super + Return
 super + @space
 	dmenu_run
 
+# browser
+super + w
+	chromium
+
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
 
-#
-# bspwm hotkeys
-#
+# Make Multimedia Keys work
 XF86MonBrightnessUp
 	xbacklight -inc 10%
 XF86MonBrightnessDown
@@ -28,12 +30,16 @@ XF86AudioLowerVolume
 	amixer -D pulse sset Master 10%-
 XF86AudioMute
 	amixer -D pulse sset Master 0%
+
+#
+# bspwm hotkeys
+#
 # quit/restart bspwm
 super + alt + {q,r}
 	bspc {quit,wm -r}
 
 # close and kill
-super + {_,shift + }w
+super + {_,shift + }q
 	bspc node -{c,k}
 
 # alternate between the tiled and monocle layout
