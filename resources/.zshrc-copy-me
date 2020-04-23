@@ -16,11 +16,12 @@ POWERLEVEL9K_EXECUTION_TIME_ICON=
 
 
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:/home/wilson/.local/bin:"$(yarn global bin)":$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/wilson/.oh-my-zsh"
 export LANG="en_US.UTF-8"
+export EDITOR=nvim
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -116,9 +117,12 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
 alias ls='ls --color=auto'
-alias v='nvim'
+alias vim='nvim'
 alias open='xdg-open'
 # (cat ~/.cache/wal/sequences &)
 
 # source ~/.cache/wal/colors-tty.sh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
