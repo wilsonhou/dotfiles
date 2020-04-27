@@ -1,0 +1,5 @@
+configuration {
+    rofi.theme: /usr/share/rofi/themes/Arc-Dark
+    font: "Hack 10";
+}
+

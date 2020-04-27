@@ -9,6 +9,7 @@ $HOME/.config/polybar/launch.sh &
 # Rescuetime Start Script:
 $HOME/scripts/launch.sh &
 timekprd & 
+amixer -c 1 sset Master 100%
 
 my_laptop_external_monitor=$(xrandr --query | grep 'HDMI1')
 if [[ $my_laptop_external_monitor = *disconnected* ]]; then
